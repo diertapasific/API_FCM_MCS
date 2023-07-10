@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="383dp"
+    android:layout_height="125dp"
+    app:cardCornerRadius="12dp"
+    android:layout_margin="10dp"
+    android:id="@+id/cardViewAPI"
+    app:cardBackgroundColor="#242526">
+
+    <TextView
+        android:id="@+id/bodyNotifications"
+        android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Enim lobortis scelerisque fermentum dui ..."
+        android:textColor="@color/white"
+        android:textAlignment="textStart"
+        android:textSize="10dp"
+        android:layout_marginTop="45dp"
+        android:layout_marginStart="20dp"
+        android:layout_width="340dp"
+        android:layout_height="65dp" />
+
+    <TextView
+        android:textStyle="bold"
+        android:layout_marginLeft="10dp"
+        android:paddingBottom="10dp"
+        android:id="@+id/titleNotifications"
+        android:text="Notifications Title"
+        android:textColor="@color/white"
+        android:textAlignment="textStart"
+        android:textSize="20dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_width="340dp"
+        android:layout_height="39dp"
+        />
+
+</androidx.cardview.widget.CardView>

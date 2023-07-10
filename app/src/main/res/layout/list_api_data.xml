@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="383dp"
+    android:layout_height="wrap_content"
+    app:cardCornerRadius="12dp"
+    android:layout_margin="10dp"
+    android:id="@+id/cardViewAPI"
+    app:cardBackgroundColor="#242526"   >
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_gravity="center"
+        android:paddingVertical="20dp">
+
+        <TextView
+            android:id="@+id/idAPI"
+            android:layout_width="130dp"
+            android:layout_height="100dp"
+            android:text="111"
+            android:textAlignment="textStart"
+            android:textColor="#bb86fc"
+            android:textSize="75dp"
+            android:layout_marginStart="25dp"
+            android:layout_marginTop="-20dp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:textStyle="bold"
+            android:id="@+id/titleAPI"
+            android:text="API Title"
+            android:textColor="@color/white"
+            android:layout_marginStart="20dp"
+            android:textAlignment="textStart"
+            android:textSize="25dp"
+            android:layout_width="wrap_content"
+            android:paddingHorizontal="10dp"
+            android:layout_height="wrap_content"
+            />
+
+        <TextView
+            android:id="@+id/bodyAPI"
+            android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Enim lobortis scelerisque fermentum dui ..."
+            android:textColor="@color/white"
+            android:textAlignment="textStart"
+            android:textSize="15dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_width="wrap_content"
+            android:paddingHorizontal="10dp"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+
+
+
+</androidx.cardview.widget.CardView>

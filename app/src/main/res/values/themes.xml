@@ -1,0 +1,18 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Theme.MCS_UAS" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">#bb86fc</item>
+        <item name="colorPrimaryVariant">#3700b3</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">#03dac6</item>
+        <item name="colorSecondaryVariant">#0b867d</item>
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor">#3a3b3c</item>
+        <!-- Customize your theme here. -->
+
+        <item name="windowActionBar">true</item>
+        <item name="windowNoTitle">true</item>
+
+    </style>
+</resources>
