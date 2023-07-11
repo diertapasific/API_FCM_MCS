@@ -2,11 +2,20 @@ package com.example.uas.models;
 
 public class notification {
 
-    String title, body;
+    String title, body, time;
 
-    public notification(String title, String body) {
+    public notification(String title, String body, String time) {
         this.title = title;
         this.body = body;
+        this.time = time;
+    }
+
+    public String  getTime() {
+        return time;
+    }
+
+    public void setTime(String time) {
+        this.time = time;
     }
 
     public String getTitle() {

@@ -3,9 +3,21 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context=".fragments.NotificationFragment">
 
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Oldest to Newest"
+        android:textColor="#bb86fc"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        android:layout_marginTop="20dp"
+        android:textAlignment="center" />
+
     <androidx.recyclerview.widget.RecyclerView
+        android:layout_marginTop="20dp"
         android:id="@+id/recycleViewNotifications"
         android:layout_width="match_parent"
         android:layout_height="match_parent"

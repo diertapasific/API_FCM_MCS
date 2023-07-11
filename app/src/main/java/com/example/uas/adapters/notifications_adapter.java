@@ -5,13 +5,10 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
-
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
-
 import com.example.uas.R;
 import com.example.uas.models.notification;
-
 import java.util.List;
 
 public class notifications_adapter extends RecyclerView.Adapter<notifications_adapter.ViewHolder>{
@@ -25,11 +22,12 @@ public class notifications_adapter extends RecyclerView.Adapter<notifications_ad
 
     public static class ViewHolder extends RecyclerView.ViewHolder {
 
-        private TextView bodyNotifications, titleNotifications;
+        private TextView bodyNotifications, titleNotifications, timeNotifications;
         public ViewHolder(@NonNull View view) {
             super(view);
             bodyNotifications = view.findViewById(R.id.bodyNotifications);
             titleNotifications = view.findViewById(R.id.titleNotifications);
+            timeNotifications = view.findViewById(R.id.timeNotifications);
         }
     }
 
@@ -45,6 +43,7 @@ public class notifications_adapter extends RecyclerView.Adapter<notifications_ad
         notification notification = notifications.get(position);
         holder.bodyNotifications.setText(notification.getBody());
         holder.titleNotifications.setText(notification.getTitle());
+        holder.timeNotifications.setText(notification.getTime());
     }
 
     @Override

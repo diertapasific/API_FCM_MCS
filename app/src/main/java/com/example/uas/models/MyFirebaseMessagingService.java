@@ -13,7 +13,10 @@ import com.example.uas.activities.MainActivity;
 import com.google.firebase.messaging.FirebaseMessagingService;
 import com.google.firebase.messaging.RemoteMessage;
 
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Calendar;
 import java.util.List;
 
 public class MyFirebaseMessagingService extends FirebaseMessagingService {
@@ -47,6 +50,10 @@ public class MyFirebaseMessagingService extends FirebaseMessagingService {
         manager.notify(0, builder.build());
         notificationTitle = remoteMessage.getNotification().getTitle();
         notificationMessage = remoteMessage.getNotification().getBody();
-        notifications.add(new notification(notificationTitle,notificationMessage));
+
+        DateFormat df = new SimpleDateFormat("EEE, d MMM yyyy  ||  HH:mm ");
+        String date = df.format(Calendar.getInstance().getTime());
+
+        notifications.add(new notification(notificationTitle,notificationMessage, date));
     }
 }
