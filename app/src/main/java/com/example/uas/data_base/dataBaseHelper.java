@@ -1,21 +1,13 @@
 package com.example.uas.data_base;
-
-import android.annotation.SuppressLint;
 import android.content.ContentValues;
 import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 
-import java.util.ArrayList;
-import java.util.List;
-
-import com.example.uas.models.api;
-
 public class    dataBaseHelper extends SQLiteOpenHelper{
 
         public static final String API_DB = "api.db";
-        List<api> apis;
 
         public dataBaseHelper(Context context) {
             super(context, API_DB, null, 1);
@@ -52,31 +44,6 @@ public class    dataBaseHelper extends SQLiteOpenHelper{
             boolean result = cursor.getCount() > 0;
             cursor.close();
             return result;
-        }
-
-        @SuppressLint("Range")
-        public List<api> viewAPI(Integer userId){
-            SQLiteDatabase db = this.getWritableDatabase();
-            String selectQuery = "SELECT * FROM api WHERE userId = ?";
-            Cursor cursor = db.rawQuery(selectQuery, new String[]{String.valueOf(userId)});
-
-            apis = new ArrayList<>();
-
-            if(cursor.moveToFirst()){
-                do{
-                    Integer id = cursor.getInt(cursor.getColumnIndex("id"));
-                    String title = cursor.getString(cursor.getColumnIndex("title"));
-                    String body = cursor.getString(cursor.getColumnIndex("body"));
-
-                    api api = new api(userId, id, title, body);
-                    apis.add(api);
-                } while (cursor.moveToNext());
-            }
-
-            cursor.close();
-            db.close();
-
-            return apis;
         }
 
         private ContentValues inputAPI(Integer id, Integer userId, String title, String body) {

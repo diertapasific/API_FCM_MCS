@@ -35,4 +35,19 @@
         android:layout_height="39dp"
         />
 
+    <TextView
+        android:textStyle="bold"
+        android:layout_marginLeft="10dp"
+        android:paddingBottom="10dp"
+        android:id="@+id/timeNotifications"
+        android:text="13.00"
+        android:textColor="@color/white"
+        android:textAlignment="textStart"
+        android:textSize="10dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="100dp"
+        android:layout_marginRight="10dp"
+        android:layout_width="340dp"
+        android:layout_height="39dp"
+        />
 </androidx.cardview.widget.CardView>
